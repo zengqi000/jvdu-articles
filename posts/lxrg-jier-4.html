@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>《兰香如故》：吕蕺儿真正翻身的凭据，不是那个生僻字，是泉州那本自己记的账｜排版复制页</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#F4F6F3;color:#243127;font-family:-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}
+.bar{position:sticky;top:0;z-index:9;background:#FFFFFF;border-bottom:1px solid #DFE7DF;padding:12px 14px calc(12px + env(safe-area-inset-bottom));box-shadow:0 2px 10px rgba(20,50,30,.05)}
+.tt{font-size:15px;font-weight:700;color:#2F5D45;margin-bottom:9px;line-height:1.4}
+.row{display:flex;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+button{font:inherit;font-size:13px;padding:9px 13px;border-radius:8px;border:1px solid #CFDCD1;background:#FFFFFF;color:#2F5D45;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button.on{background:#2F5D45;border-color:#2F5D45;color:#FFFFFF}
+button.primary{background:#DCF5E7;border-color:#A9D8BC;color:#1F4633;font-weight:700;flex:1;min-width:130px}
+button:active{opacity:.75}
+button[disabled]{opacity:.45;cursor:not-allowed}
+.tip{margin:6px 0 0;font-size:12px;line-height:1.6;color:#6B7C70}
+.tip.ok{color:#1F7A4D;font-weight:700}
+.stage{padding:18px 12px 60px;display:flex;justify-content:center}
+.paper{width:min(375px,100%);background:#FFFFFF;border-radius:12px;box-shadow:0 4px 22px rgba(20,50,30,.09);padding:16px 0 8px;overflow:hidden}
+.stage.wide .paper{width:min(677px,100%)}
+.doc-title{font-size:20px;line-height:1.45;font-weight:800;color:#1E3A5F;margin:0 16px 18px}
+.article{padding:0 2px;font-size:15px;line-height:1.8}
+.article img{max-width:100%!important;height:auto!important}
+.footer{text-align:center;font-size:11px;color:#9AA89D;padding:0 12px 28px;line-height:1.7}
+.gone{padding:40px 24px;text-align:center;color:#8A9A90;font-size:14px;line-height:1.9}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="tt">《兰香如故》：吕蕺儿真正翻身的凭据，不是那个生僻字，是泉州那本自己记的账｜排版复制页</div>
+  <div class="row">
+    <button data-ver="full" class="on">完整排版</button>
+    <button data-ver="simple">简化排版</button>
+  </div>
+  <div class="row">
+    <button data-view="phone" class="on">手机模式</button>
+    <button data-view="wide">宽屏查看</button>
+  </div>
+  <div class="row">
+    <button id="copyRich" class="primary">复制图文到公众号</button>
+    <button id="copyText" class="primary">复制纯文字</button>
+    <button id="copyTitle" class="primary">复制标题</button>
+  </div>
+  <p class="tip" id="tip">手机上：点「复制图文」后打开公众号助手粘贴。样式丢失就切「简化排版」再复制一次，仍不行用「复制纯文字」。标题在编辑器里单独粘贴。</p>
+</header>
+<main class="stage phone" id="stage">
+  <div class="paper">
+    <h1 class="doc-title">《兰香如故》：吕蕺儿真正翻身的凭据，不是那个生僻字，是泉州那本自己记的账</h1>
+    <div id="view-full" class="article"></div>
+    <div id="view-simple" class="article" style="display:none"></div>
+  </div>
+</main>
+<div class="footer">完整版带卡片与高亮，适合公众号网页编辑器；简化版只留基础段落样式，适合手机端公众号助手。</div>
+<script async id="cloudSdk" src="https://cdn.jsdelivr.net/npm/@tencent-ai/workbuddy-cloud-sdk@dev/lib/index.global.js"></script>
+<script>
+window.CLOUD_ENDPOINT="https://jiachai-copy-page.app.workbuddy.host";
+window.CLOUD_KEY="wbpk_cDcUc0btutt1LuyYI5dtag_pnqZdEBs9siiNG7IIZ6OsKk3PwQB7q5H";
+var ver='full',view='phone';
+var TITLE="《兰香如故》：吕蕺儿真正翻身的凭据，不是那个生僻字，是泉州那本自己记的账";
+var SLUG="lxrg-jier-4";
+function tip(s,ok){var e=document.getElementById('tip');e.textContent=s;e.className=ok?'tip ok':'tip';}
+function node(){return document.getElementById(ver==='full'?'view-full':'view-simple');}
+function activeBtn(sel,val){var bs=document.querySelectorAll(sel);for(var i=0;i<bs.length;i++){bs[i].className=(bs[i].getAttribute(sel.indexOf('ver')>-1?'data-ver':'data-view')===val?'on':'');}}
+var vbs=document.querySelectorAll('[data-ver]');
+for(var i=0;i<vbs.length;i++){vbs[i].onclick=function(){ver=this.getAttribute('data-ver');activeBtn('[data-ver]',ver);document.getElementById('view-full').style.display=ver==='full'?'':'none';document.getElementById('view-simple').style.display=ver==='simple'?'':'none';tip(ver==='full'?'已切到完整排版，点「复制图文到公众号」。':'已切到简化排版，手机端粘贴更稳，点「复制图文到公众号」。');};}
+var wbs=document.querySelectorAll('[data-view]');
+for(var j=0;j<wbs.length;j++){wbs[j].onclick=function(){view=this.getAttribute('data-view');activeBtn('[data-view]',view);document.getElementById('stage').className='stage '+(view==='wide'?'wide':'phone');tip(view==='phone'?'已切到手机模式，按手机行宽预览。':'已切到宽屏查看，只是放大预览，复制内容不变。');};}
+function fallbackCopy(n){
+  var prev=n.getAttribute('contenteditable');n.setAttribute('contenteditable','true');n.focus();
+  var r=document.createRange();r.selectNodeContents(n);var s=window.getSelection();s.removeAllRanges();s.addRange(r);
+  var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+  if(prev===null){n.removeAttribute('contenteditable');}else{n.setAttribute('contenteditable',prev);}
+  s.removeAllRanges();return ok;
+}
+document.getElementById('copyRich').onclick=async function(){
+  var n=node(),h=n.innerHTML,t=n.innerText;
+  if(!n.innerHTML.trim()){tip('正文没加载出来，稍等一下再试。');return;}
+  if(navigator.clipboard&&window.ClipboardItem){
+    try{await navigator.clipboard.write([new ClipboardItem({'text/html':new Blob([h],{type:'text/html'}),'text/plain':new Blob([t],{type:'text/plain'})})]);tip('已复制图文（含样式），打开公众号助手或编辑器粘贴即可。',true);return;}catch(e){}
+  }
+  if(fallbackCopy(n)){tip('已复制图文，打开公众号助手或编辑器粘贴即可。',true);}
+  else{tip('这个浏览器拦住了复制，请改用「复制纯文字」，或换系统浏览器打开本页。');}
+};
+function copyPlain(s,msg){
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(s).then(function(){tip(msg,true);},function(){if(textareaFallback(s)){tip(msg,true);}else{tip('复制失败，请长按选中正文后手动复制。');}});}
+  else if(textareaFallback(s)){tip(msg,true);}else{tip('复制失败，请长按选中正文后手动复制。');}
+}
+function textareaFallback(s){var ta=document.createElement('textarea');ta.value=s;ta.style.position='fixed';ta.style.left='-9999px';document.body.appendChild(ta);ta.focus();ta.select();ta.setSelectionRange(0,s.length);var ok=false;try{ok=document.execCommand('copy');}catch(e){}document.body.removeChild(ta);return ok;}
+document.getElementById('copyText').onclick=function(){copyPlain(node().innerText.replace(/\n{3,}/g,'\n\n').trim(),'已复制纯文字，粘进公众号助手正文即可。');};
+document.getElementById('copyTitle').onclick=function(){copyPlain(TITLE,'已复制标题，粘进公众号标题栏即可。');};
+
+/* 正文从云库取：文章被删时这里查不到，页面直接显示已删除 */
+function showGone(){
+  document.getElementById('stage').innerHTML='<div class="gone">这篇文章已被删除。<br>如果你之前收藏过这个链接，它已经失效了。</div>';
+  var bs=document.querySelectorAll('button');for(var k=0;k<bs.length;k++){bs[k].disabled=true;}
+  tip('文章已删除。');
+}
+function loadContent(){
+  if(!window.WorkBuddyCloud||!window.WorkBuddyCloud.createWorkBuddyCloud){setTimeout(loadContent,150);return;}
+  var c=window.WorkBuddyCloud.createWorkBuddyCloud({endpoint:window.CLOUD_ENDPOINT,publishableKey:window.CLOUD_KEY});  c.database.from('post_content').select('full_html,simple_html').eq('slug',SLUG).maybeSingle().then(function(res){
+    if(res&&res.error){tip('正文没加载出来，刷新再试。');return;}
+    var row=res&&res.data;
+    if(!row){showGone();return;}
+    document.getElementById('view-full').innerHTML=row.full_html||'';
+    document.getElementById('view-simple').innerHTML=row.simple_html||'';
+  }).catch(function(){tip('正文没加载出来，刷新再试。');});
+}
+loadContent();
+</script>
+</body>
+</html>
