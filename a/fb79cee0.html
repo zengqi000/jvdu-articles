@@ -190,6 +190,9 @@
   }
 
   function allImageSrcs() {
+    // 新文章正文里不放图，图片清单随文章数据下发，只在「复制图片」面板里显示。
+    // 老文章没有 images 字段，仍从正文 img 里取，保持旧页面原样。
+    if (post.images && post.images.length) return post.images.slice();
     var imgs = bodyEl.querySelectorAll('img');
     var out = [];
     for (var i = 0; i < imgs.length; i++) if (imgs[i].src) out.push(imgs[i].src);
