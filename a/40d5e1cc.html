@@ -108,9 +108,8 @@
 <div class="dock"><div class="dock-in">
   <button id="btn-rich" class="btn-main" type="button">复制全文（含排版）</button>
   <div class="row">
-    <button id="btn-plain" type="button">复制纯文字</button>
     <button id="btn-title" type="button">复制标题</button>
-    <button id="btn-image" type="button">复制图片</button>
+    <button id="btn-image" type="button">复制封面</button>
   </div>
   <div class="row">
     <button id="btn-comment" type="button">复制评论（挑一条）</button>
@@ -118,7 +117,7 @@
   <span class="status" id="status" role="status"></span>
 </div></div>
 <div class="imgpanel" id="imgpanel" hidden>
-  <p id="imgtip">图片已打开：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。</p>
+  <p id="imgtip">这是原文章的封面：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。</p>
   <div class="imglist" id="imglist"></div>
   <button id="imgclose" type="button">关闭</button>
 </div>
@@ -189,33 +188,32 @@
     } catch (e) { return false; }
   }
 
-  function allImageSrcs() {
-    // 新文章正文里不放图，图片清单随文章数据下发，只在「复制图片」面板里显示。
-    // 老文章没有 images 字段，仍从正文 img 里取，保持旧页面原样。
-    if (post.images && post.images.length) return post.images.slice();
+  function coverSrc() {
+    // 每篇只保留封面一张图，点「复制封面」显示原文章的封面。
+    // 新文章 images 字段只有封面；老文章没有 images 字段，从正文 img 里取第一张。
+    if (post.images && post.images.length) return post.images[0];
     var imgs = bodyEl.querySelectorAll('img');
-    var out = [];
-    for (var i = 0; i < imgs.length; i++) if (imgs[i].src) out.push(imgs[i].src);
-    return out;
+    for (var i = 0; i < imgs.length; i++) if (imgs[i].src) return imgs[i].src;
+    return '';
   }
 
-  // 把所有图片一次性列出来：第一张标封面，其余按出现顺序编号，逐张长按/右键保存。
-  function showPanel(srcs, note) {
+  // 面板只显示原文章封面这一张图，供长按/右键保存。
+  function showCover(src, note) {
     imgList.innerHTML = '';
-    for (var i = 0; i < srcs.length; i++) {
+    if (src) {
       var box = document.createElement('div');
       box.className = 'imgitem';
       var label = document.createElement('p');
       label.className = 'imglabel';
-      label.textContent = srcs.length === 1 ? '封面' : ('第 ' + (i + 1) + ' 张 / 共 ' + srcs.length + ' 张' + (i === 0 ? '（封面）' : ''));
+      label.textContent = '封面';
       var im = document.createElement('img');
-      im.src = srcs[i];
-      im.alt = '文章图片 ' + (i + 1);
+      im.src = src;
+      im.alt = '文章封面';
       box.appendChild(label);
       box.appendChild(im);
       imgList.appendChild(box);
     }
-    panelTip.textContent = note || ('共 ' + srcs.length + ' 张图：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。');
+    panelTip.textContent = note || '这是原文章的封面：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。';
     panel.hidden = false;
   }
 
@@ -390,42 +388,16 @@
     });
   });
 
-  document.getElementById('btn-plain').addEventListener('click', function () {
-    if (isWX) { selectAndHint(); return; }
-    copyRich().then(function (ok) {
-      if (ok) { setStatus('正文已复制（不含标题和图片），直接去公众号助手粘贴即可'); return; }
-      selectAndHint();
-    });
-  });
-
   document.getElementById('btn-title').addEventListener('click', function () {
     var ok = copyViaTextarea(post.title || '');
     setStatus(ok ? '标题已复制' : '复制失败，长按标题手动选择', !ok);
   });
 
   document.getElementById('btn-image').addEventListener('click', function () {
-    var srcs = allImageSrcs();
-    if (!srcs.length) { setStatus('这篇没有图片', true); return; }
-    if (srcs.length > 1) {
-      showPanel(srcs);
-      setStatus('共 ' + srcs.length + ' 张图已打开，逐张长按或右键保存', true);
-      return;
-    }
-    var src = srcs[0];
-    if (isWX || !navigator.clipboard || !window.ClipboardItem || !window.isSecureContext) {
-      showPanel(srcs);
-      setStatus('图片已打开，长按图片保存即可', true);
-      return;
-    }
-    imageBlob().then(function (blob) {
-      if (!blob) { showPanel(srcs); setStatus('浏览器没法直接写剪贴板，已在页面上打开图片', true); return; }
-      navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]).then(function () {
-        setStatus('图片已复制，去公众号后台上传');
-      }).catch(function () {
-        showPanel(srcs);
-        setStatus('复制被浏览器拦了，右键保存这张图也可以用', true);
-      });
-    });
+    var src = coverSrc();
+    if (!src) { setStatus('这篇没有封面', true); return; }
+    showCover(src);
+    setStatus('已打开原文章封面，长按或右键保存即可', true);
   });
 
   document.getElementById('btn-comment').addEventListener('click', function () {
