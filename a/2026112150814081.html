@@ -108,7 +108,6 @@
 <div class="dock"><div class="dock-in">
   <button id="btn-rich" class="btn-main" type="button">复制全文（含排版）</button>
   <div class="row">
-    <button id="btn-plain" type="button">复制纯文字</button>
     <button id="btn-title" type="button">复制标题</button>
     <button id="btn-image" type="button">复制封面</button>
   </div>
@@ -385,14 +384,6 @@
     if (isWX) { selectAndHint(); return; }
     copyRich().then(function (ok) {
       if (ok) { setStatus('带排版的全文已复制，直接去公众号助手粘贴即可'); return; }
-      selectAndHint();
-    });
-  });
-
-  document.getElementById('btn-plain').addEventListener('click', function () {
-    if (isWX) { selectAndHint(); return; }
-    copyRich().then(function (ok) {
-      if (ok) { setStatus('正文已复制（不含标题和图片），直接去公众号助手粘贴即可'); return; }
       selectAndHint();
     });
   });
