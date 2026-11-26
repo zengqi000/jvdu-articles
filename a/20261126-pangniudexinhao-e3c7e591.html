@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>孩子放学进门有这5个小反应，比追问成绩更能看出他在学校过得好不好</title>
+<meta name="description" content="孩子放学进门有这5个小反应，比追问成绩更能看出他在学校过得好不好  孩子一进家门，不少当爸妈的第一反应就是迎上去问：今天有没有被批评，作业多">
+<style>
+  :root{
+    --ink:#22252a; --ink-soft:#5d626b; --green:#2F5D45; --green-soft:#EAF1EB;
+    --line:#e6e0d8; --paper:#f6f4ef; --red:#c0392b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:calc(272px + env(safe-area-inset-bottom));
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:14px 12px 0;}
+  .paper{
+    background:#fff;border-radius:12px;padding:24px 20px 30px;
+    box-shadow:0 8px 28px rgba(80,50,30,.06);
+  }
+  .body{font-size:17px;line-height:1.95;color:var(--ink);}
+  .body h1{font-size:23px;line-height:1.5;margin:0 0 18px;font-weight:800;letter-spacing:.2px;}
+  .body img{display:block;max-width:100% !important;height:auto !important;margin:16px auto;border-radius:8px;-webkit-touch-callout:default;}
+  .copy-hide{display:none !important;}
+  .body p{margin:0 0 17px;}
+  .body strong{color:var(--red);font-weight:700;}
+  .body h2{font-size:19px;margin:28px 0 14px;font-weight:700;}
+  .body blockquote{margin:16px 0;padding:10px 14px;border-left:3px solid #d8cfc4;color:var(--ink-soft);}
+  .foot{max-width:720px;margin:14px auto 0;padding:0 6px;color:#9a928a;font-size:12px;line-height:1.8;text-align:center;}
+  .dock{
+    position:fixed;left:0;right:0;bottom:0;z-index:20;
+    background:rgba(255,255,255,.98);border-top:1px solid var(--line);
+    padding:11px 12px calc(10px + env(safe-area-inset-bottom));
+    backdrop-filter:blur(10px);
+  }
+  .dock-in{max-width:720px;margin:0 auto;}
+  .btn-main{
+    display:block;width:100%;border:0;border-radius:9px;background:#2463d4;color:#fff;
+    padding:14px 18px;font:700 16px -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;cursor:pointer;
+  }
+  .btn-main:active{background:#1b4fae;}
+  .row{display:flex;gap:8px;margin-top:9px;}
+  .row button{
+    flex:1 1 0;border:1px solid #d9cec6;border-radius:9px;background:#fff;color:#5d5149;
+    padding:13px 6px;font:15px -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;cursor:pointer;
+  }
+  .row button:active{background:#f7f2ec;}
+  .status{display:block;min-height:18px;margin-top:8px;font-size:12.5px;line-height:1.55;text-align:center;color:#2c6b3f;}
+  .status.warn{color:#a4551f;}
+  .imgpanel{
+    position:fixed;inset:0;z-index:40;display:flex;flex-direction:column;
+    background:#141210;padding:16px 14px calc(16px + env(safe-area-inset-bottom));
+  }
+  .imgpanel[hidden]{display:none;}
+  .imgpanel p{margin:0 0 12px;color:#f2ece4;font-size:13.5px;line-height:1.7;text-align:center;}
+  .imglist{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;display:flex;flex-direction:column;gap:18px;}
+  .imgitem{background:#1f1c19;border-radius:10px;padding:10px;}
+  .imgitem .imglabel{margin:0 0 8px;color:#c9b9a6;font-size:12.5px;text-align:center;}
+  .imgitem img{display:block;width:100%;max-height:68vh;object-fit:contain;border-radius:8px;-webkit-touch-callout:default;}
+  .imgitem .imgexport{
+    display:block;margin:10px auto 0;border:1px solid #5a5049;border-radius:8px;
+    background:#2b2621;color:#f2ece4;padding:8px 22px;font:14px -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;cursor:pointer;
+  }
+  .imgpanel > button{
+    flex:0 0 auto;margin:14px auto 0;width:100%;max-width:420px;border:0;border-radius:9px;
+    background:#fff;color:#3a332c;padding:12px;font:600 15px -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;cursor:pointer;
+  }
+  @media(max-width:680px){
+    .paper{padding:18px 14px 24px;border-radius:9px;}
+    .body{font-size:16.5px;line-height:1.92;}
+    .body h1{font-size:21px;}
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <article class="paper"><div class="body" id="body"></div></article>
+  <p class="foot">本页只用来阅读与复制，图片和排版全部内嵌。</p>
+</main>
+<div class="dock"><div class="dock-in">
+  <button id="btn-rich" class="btn-main" type="button">复制全文（含排版）</button>
+  <div class="row">
+    <button id="btn-title" type="button">复制标题</button>
+    <button id="btn-image" type="button">复制封面</button>
+  </div>
+  <span class="status" id="status" role="status"></span>
+</div></div>
+<div class="imgpanel" id="imgpanel" hidden>
+  <p id="imgtip">这是原文章的封面：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。</p>
+  <div class="imglist" id="imglist"></div>
+  <button id="imgclose" type="button">关闭</button>
+</div>
+<script id="pageData" type="application/json">{"batch": "放学五个表现", "latest": ["20261126-pangniudexinhao-e3c7e591"], "articles": [{"id": "20261126-pangniudexinhao-e3c7e591", "title": "孩子放学进门有这5个小反应，比追问成绩更能看出他在学校过得好不好", "plain": "孩子放学进门有这5个小反应，比追问成绩更能看出他在学校过得好不好\n\n孩子一进家门，不少当爸妈的第一反应就是迎上去问：今天有没有被批评，作业多不多。问得急了，孩子干脆回一句「没事」，书包一放就钻进房间。翻过几本儿童心理方面的书才慢慢明白，他在学校待得舒不舒服，其实不用靠盘问，进门后那几个藏不住的小反应，早把答案说了。你追着问十句，抵不过他进门那一会儿的自然样子。\n\n这几个反应装不出来，也用不着特意教。一样一样摆出来看，孩子这一天过得松不松，心里就能有个准数。\n\n一、进门先找吃的，说明这一天没绷着\n\n书包还没放下，人先拐进厨房，翻出面包或者水果就啃，嘴里还念叨今天食堂的菜难吃。看着没个正形，其实是好事。\n\n心理学里有个基本规律，人在放松、没有防备的时候，胃口才开得出来。孩子在学校要是受了委屈、一直紧绷着，身体会先进入戒备状态，那种时候根本不觉得饿。肚子肯先说话的孩子，心里多半没绷着。\n\n所以别嫌他吃相急，顺手给他递杯水，让他边吃边讲。这份松弛，是他一天里难得的歇脚时刻。\n\n吃完这口，看他肯不肯开口说话。\n\n二、肯跟你讲没头没尾的闲话，是没把你当成要交差的人\n\n有的孩子回家话特别密：同桌上课打瞌睡被点名了，体育课玩拔河输了，哪个同学带了个奇怪的橡皮。听着全是没营养的碎碎念，可这正是好信号。\n\n愿意把这些小东西讲给你听，说明他在学校有来有往，有自己的一圈朋友，没把自己封闭起来。反倒是那些一句「今天学了什么」就问哑的家长要想想，问法太像查岗，孩子自然应付了事。闲话讲得越多，孩子跟你之间越通。\n\n他讲的时候，别急着纠正、别往学习上引，先听完。听完这一段，他后面才敢把考砸的事也端出来。\n\n话多话少看完了，再看一样最实际的东西：书包。\n\n三、书包乱不要紧，该带的东西都在就稳了\n\n别急着嫌书包乱。掏出来一看，课本、作业本、文具盒一样不缺，虽然折了角、卷了边，但都在，这说明孩子跟得上学校的节奏，知道什么课要带什么书，收尾的事他自己做完了。\n\n要留意的是另一种：作业本三天两头找不到，铅笔丢了不吭声，连名字都懒得写。这不是粗心那么简单，可能是他这一天魂不守舍，心根本没放在课堂上。东西收拾得利索，孩子这一天基本是清醒的。\n\n发现东西总缺，先别骂，问问他这一天是怎么过的，把背后的原因找出来再对症。\n\n书包是外在的，情绪是里子的，接着往下看。\n\n四、回家敢发脾气，反而是心里没攒事\n\n不少爸妈怕孩子回家闹脾气，觉得在学校准是受了委屈。方向其实反了。孩子因为积木搭不好急得跺脚，或者你碰了他的玩具他嚷起来，这恰恰说明他在学校没憋着什么，还有余力在熟悉的人面前撒气。\n\n真正要操心的是相反的样子：进门一声不吭，问他三句答一句，连之前追着看的动画片都懒得点开。情绪一直压着没地方放，才说明这一天出了他自己消不掉的问题。敢在你面前发火的孩子，是把最不设防的一面留给了你。\n\n他闹的时候稳住别跟着急，等他平静下来再问发生了什么。家里能接得住他的火气，他心里那根弦才不会一直绷着。\n\n情绪放完了，最后看一觉睡得怎么样。\n\n五、躺下很快睡着，这一天就没过不去的坎\n\n睡眠最诚实。洗完澡往床上一躺，没几分钟呼吸就匀了，第二天早上到点自己能起，这说明他心里没挂着事，脑子真正歇下来了。\n\n反过来，翻来覆去半天睡不着，半夜惊醒、说梦话，早上赖着不肯起、一提上学就磨蹭，这些信号连起来看，可能是学校里有什么事在他心里过不去，大人还没察觉。觉睡得沉，这一天才算真的过去了。\n\n睡觉前那半小时别安排学习的事，聊聊闲的，让他带着松快劲儿入睡。真发现连着几天睡不安稳，就找个轻松的时候，慢慢问出学校里的事。\n\n结语\n\n孩子在学校过得好不好，从来不在老师夸没夸他，也不在那张卷子的分数上。进了家门先找吃的、肯讲一箩筐闲话、书包乱但东西齐全、闹得出来脾气、躺下就睡得着，这五样凑齐了，他在学校的日子大概率是舒展的。\n\n当爸妈的不用天天盯着班级群，也不用一进门就连着追问。我辅导两个娃作业这些年，也练出一点体会：每次话到嘴边想替他把答案说了，就先咽回去，改成问他这一天过得顺不顺。问话一换，孩子肯讲的反而多了，急脾气也少了一半。\n\n少问一句成绩，多看一眼他进门后的样子，孩子过得好不好，你自己就能看出来。\n\n温馨提示：文中图片/视频来源网络，如有侵权请立刻联系我们及时删除，感谢", "body_plain": "孩子一进家门，不少当爸妈的第一反应就是迎上去问：今天有没有被批评，作业多不多。问得急了，孩子干脆回一句「没事」，书包一放就钻进房间。翻过几本儿童心理方面的书才慢慢明白，他在学校待得舒不舒服，其实不用靠盘问，进门后那几个藏不住的小反应，早把答案说了。你追着问十句，抵不过他进门那一会儿的自然样子。\n\n这几个反应装不出来，也用不着特意教。一样一样摆出来看，孩子这一天过得松不松，心里就能有个准数。\n\n一、进门先找吃的，说明这一天没绷着\n\n书包还没放下，人先拐进厨房，翻出面包或者水果就啃，嘴里还念叨今天食堂的菜难吃。看着没个正形，其实是好事。\n\n心理学里有个基本规律，人在放松、没有防备的时候，胃口才开得出来。孩子在学校要是受了委屈、一直紧绷着，身体会先进入戒备状态，那种时候根本不觉得饿。肚子肯先说话的孩子，心里多半没绷着。\n\n所以别嫌他吃相急，顺手给他递杯水，让他边吃边讲。这份松弛，是他一天里难得的歇脚时刻。\n\n吃完这口，看他肯不肯开口说话。\n\n二、肯跟你讲没头没尾的闲话，是没把你当成要交差的人\n\n有的孩子回家话特别密：同桌上课打瞌睡被点名了，体育课玩拔河输了，哪个同学带了个奇怪的橡皮。听着全是没营养的碎碎念，可这正是好信号。\n\n愿意把这些小东西讲给你听，说明他在学校有来有往，有自己的一圈朋友，没把自己封闭起来。反倒是那些一句「今天学了什么」就问哑的家长要想想，问法太像查岗，孩子自然应付了事。闲话讲得越多，孩子跟你之间越通。\n\n他讲的时候，别急着纠正、别往学习上引，先听完。听完这一段，他后面才敢把考砸的事也端出来。\n\n话多话少看完了，再看一样最实际的东西：书包。\n\n三、书包乱不要紧，该带的东西都在就稳了\n\n别急着嫌书包乱。掏出来一看，课本、作业本、文具盒一样不缺，虽然折了角、卷了边，但都在，这说明孩子跟得上学校的节奏，知道什么课要带什么书，收尾的事他自己做完了。\n\n要留意的是另一种：作业本三天两头找不到，铅笔丢了不吭声，连名字都懒得写。这不是粗心那么简单，可能是他这一天魂不守舍，心根本没放在课堂上。东西收拾得利索，孩子这一天基本是清醒的。\n\n发现东西总缺，先别骂，问问他这一天是怎么过的，把背后的原因找出来再对症。\n\n书包是外在的，情绪是里子的，接着往下看。\n\n四、回家敢发脾气，反而是心里没攒事\n\n不少爸妈怕孩子回家闹脾气，觉得在学校准是受了委屈。方向其实反了。孩子因为积木搭不好急得跺脚，或者你碰了他的玩具他嚷起来，这恰恰说明他在学校没憋着什么，还有余力在熟悉的人面前撒气。\n\n真正要操心的是相反的样子：进门一声不吭，问他三句答一句，连之前追着看的动画片都懒得点开。情绪一直压着没地方放，才说明这一天出了他自己消不掉的问题。敢在你面前发火的孩子，是把最不设防的一面留给了你。\n\n他闹的时候稳住别跟着急，等他平静下来再问发生了什么。家里能接得住他的火气，他心里那根弦才不会一直绷着。\n\n情绪放完了，最后看一觉睡得怎么样。\n\n五、躺下很快睡着，这一天就没过不去的坎\n\n睡眠最诚实。洗完澡往床上一躺，没几分钟呼吸就匀了，第二天早上到点自己能起，这说明他心里没挂着事，脑子真正歇下来了。\n\n反过来，翻来覆去半天睡不着，半夜惊醒、说梦话，早上赖着不肯起、一提上学就磨蹭，这些信号连起来看，可能是学校里有什么事在他心里过不去，大人还没察觉。觉睡得沉，这一天才算真的过去了。\n\n睡觉前那半小时别安排学习的事，聊聊闲的，让他带着松快劲儿入睡。真发现连着几天睡不安稳，就找个轻松的时候，慢慢问出学校里的事。\n\n结语\n\n孩子在学校过得好不好，从来不在老师夸没夸他，也不在那张卷子的分数上。进了家门先找吃的、肯讲一箩筐闲话、书包乱但东西齐全、闹得出来脾气、躺下就睡得着，这五样凑齐了，他在学校的日子大概率是舒展的。\n\n当爸妈的不用天天盯着班级群，也不用一进门就连着追问。我辅导两个娃作业这些年，也练出一点体会：每次话到嘴边想替他把答案说了，就先咽回去，改成问他这一天过得顺不顺。问话一换，孩子肯讲的反而多了，急脾气也少了一半。\n\n少问一句成绩，多看一眼他进门后的样子，孩子过得好不好，你自己就能看出来。\n\n温馨提示：文中图片/视频来源网络，如有侵权请立刻联系我们及时删除，感谢", "html": "<section style=\"font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,sans-serif;color:#3a3a3a;text-align:left;letter-spacing:0;background-color:#ffffff;\">\n<p style=\"margin:30px 0 0;text-align:center;font-size:12px;letter-spacing:.18em;color:#6b4e9e;line-height:22px;background-color:transparent;\">· 家庭教育 ·<\/p>\n\n<p style=\"margin:0 0 24px;padding:16px 18px;border-left:3px solid #6b4e9e;border-radius:8px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:0;background-color:#f7f5fb;\">孩子一进家门，不少当爸妈的第一反应就是迎上去问：今天有没有被批评，作业多不多。问得急了，孩子干脆回一句「没事」，书包一放就钻进房间。翻过几本儿童心理方面的书才慢慢明白，他在学校待得舒不舒服，其实不用靠盘问，进门后那几个藏不住的小反应，早把答案说了。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">你追着问十句，抵不过他进门那一会儿的自然样子。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">这几个反应装不出来，也用不着特意教。一样一样摆出来看，孩子这一天过得松不松，心里就能有个准数。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">一、进门先找吃的，说明这一天没绷着<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">书包还没放下，人先拐进厨房，翻出面包或者水果就啃，嘴里还念叨今天食堂的菜难吃。看着没个正形，其实是好事。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">心理学里有个基本规律，人在放松、没有防备的时候，胃口才开得出来。孩子在学校要是受了委屈、一直紧绷着，身体会先进入戒备状态，那种时候根本不觉得饿。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">肚子肯先说话的孩子，心里多半没绷着。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">所以别嫌他吃相急，顺手给他递杯水，让他边吃边讲。这份松弛，是他一天里难得的歇脚时刻。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">吃完这口，看他肯不肯开口说话。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">二、肯跟你讲没头没尾的闲话，是没把你当成要交差的人<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">有的孩子回家话特别密：同桌上课打瞌睡被点名了，体育课玩拔河输了，哪个同学带了个奇怪的橡皮。听着全是没营养的碎碎念，可这正是好信号。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">愿意把这些小东西讲给你听，说明他在学校有来有往，有自己的一圈朋友，没把自己封闭起来。反倒是那些一句「今天学了什么」就问哑的家长要想想，问法太像查岗，孩子自然应付了事。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">闲话讲得越多，孩子跟你之间越通。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">他讲的时候，别急着纠正、别往学习上引，先听完。听完这一段，他后面才敢把考砸的事也端出来。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">话多话少看完了，再看一样最实际的东西：书包。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">三、书包乱不要紧，该带的东西都在就稳了<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">别急着嫌书包乱。掏出来一看，课本、作业本、文具盒一样不缺，虽然折了角、卷了边，但都在，这说明孩子跟得上学校的节奏，知道什么课要带什么书，收尾的事他自己做完了。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">要留意的是另一种：作业本三天两头找不到，铅笔丢了不吭声，连名字都懒得写。这不是粗心那么简单，可能是他这一天魂不守舍，心根本没放在课堂上。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">东西收拾得利索，孩子这一天基本是清醒的。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">发现东西总缺，先别骂，问问他这一天是怎么过的，把背后的原因找出来再对症。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">书包是外在的，情绪是里子的，接着往下看。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">四、回家敢发脾气，反而是心里没攒事<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">不少爸妈怕孩子回家闹脾气，觉得在学校准是受了委屈。方向其实反了。孩子因为积木搭不好急得跺脚，或者你碰了他的玩具他嚷起来，这恰恰说明他在学校没憋着什么，还有余力在熟悉的人面前撒气。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">真正要操心的是相反的样子：进门一声不吭，问他三句答一句，连之前追着看的动画片都懒得点开。情绪一直压着没地方放，才说明这一天出了他自己消不掉的问题。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">敢在你面前发火的孩子，是把最不设防的一面留给了你。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">他闹的时候稳住别跟着急，等他平静下来再问发生了什么。家里能接得住他的火气，他心里那根弦才不会一直绷着。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">情绪放完了，最后看一觉睡得怎么样。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">五、躺下很快睡着，这一天就没过不去的坎<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">睡眠最诚实。洗完澡往床上一躺，没几分钟呼吸就匀了，第二天早上到点自己能起，这说明他心里没挂着事，脑子真正歇下来了。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">反过来，翻来覆去半天睡不着，半夜惊醒、说梦话，早上赖着不肯起、一提上学就磨蹭，这些信号连起来看，可能是学校里有什么事在他心里过不去，大人还没察觉。<strong style=\"font-size:1.1em;font-weight:700;color:#c0392b;padding:0;border-radius:0;text-align:left;letter-spacing:0;background-color:transparent;\">觉睡得沉，这一天才算真的过去了。<\/strong><\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">睡觉前那半小时别安排学习的事，聊聊闲的，让他带着松快劲儿入睡。真发现连着几天睡不安稳，就找个轻松的时候，慢慢问出学校里的事。<\/p>\n<p style=\"margin:35px 0 18px;font-size:18px;line-height:32px;font-weight:700;color:#1a1a1a;border-left:4px solid #6b4e9e;padding:0 0 0 12px;text-align:left;letter-spacing:0;background-color:transparent;\">结语<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">孩子在学校过得好不好，从来不在老师夸没夸他，也不在那张卷子的分数上。进了家门先找吃的、肯讲一箩筐闲话、书包乱但东西齐全、闹得出来脾气、躺下就睡得着，这五样凑齐了，他在学校的日子大概率是舒展的。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">当爸妈的不用天天盯着班级群，也不用一进门就连着追问。我辅导两个娃作业这些年，也练出一点体会：每次话到嘴边想替他把答案说了，就先咽回去，改成问他这一天过得顺不顺。问话一换，孩子肯讲的反而多了，急脾气也少了一半。<\/p>\n<p style=\"margin:0 0 18px;font-size:15px;line-height:28px;color:#3a3a3a;text-align:justify;letter-spacing:.01em;background-color:transparent;\">少问一句成绩，多看一眼他进门后的样子，孩子过得好不好，你自己就能看出来。<\/p>\n<p style=\"margin:18px 0 0;padding-top:14px;border-top:1px solid #EDEAE6;font-size:13px;line-height:1.75;color:#A5A5A5;font-family:-apple-system,BlinkMacSystemFont,&#x27;Segoe UI&#x27;,&#x27;PingFang SC&#x27;,&#x27;Microsoft YaHei&#x27;,sans-serif;text-align:left;letter-spacing:0;background-color:transparent;\">温馨提示：文中图片/视频来源网络，如有侵权请立刻联系我们及时删除，感谢<\/p>\n<\/section>", "images": ["data:image/jpeg;base64,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"], "hide_images": true, "original_title": "如果孩子放学回家有这5个表现，说明在学校过得很好，爸妈可放宽心", "batch": "放学五个表现", "created": "2026-11-26 11:32", "updated": "2026-11-26 11:32"}]}</script>
+<script>
+(function(){
+  var data = null;
+  try { data = JSON.parse(document.getElementById('pageData').textContent || '{}'); } catch (e) { return; }
+  var arts = (data && data.articles) || [];
+  if (!arts.length) return;
+  var latest = (data && data.latest) || [];
+
+  function pickPost() {
+    var params = new URLSearchParams(location.search);
+    var a = params.get('a');
+    if (a) {
+      for (var i = 0; i < arts.length; i++) if (arts[i].id === a) return arts[i];
+    }
+    var n = parseInt(params.get('p') || '1', 10);
+    if (!(n >= 1 && n <= latest.length)) n = 1;
+    if (latest.length) {
+      var want = latest[n - 1];
+      for (var j = 0; j < arts.length; j++) if (arts[j].id === want) return arts[j];
+    }
+    return arts[0];
+  }
+
+  var post = pickPost();
+
+  var bodyEl = document.getElementById('body');
+  bodyEl.innerHTML = post.html || '';
+  document.title = post.title || data.batch || '文章';
+  var desc = document.querySelector('meta[name="description"]');
+  if (desc) desc.setAttribute('content', String(post.plain || '').replace(/\s+/g, ' ').slice(0, 70));
+
+  var isWX = /MicroMessenger/i.test(navigator.userAgent || '');
+  var statusEl = document.getElementById('status');
+  var panel = document.getElementById('imgpanel');
+  var imgList = document.getElementById('imglist');
+  var panelTip = document.getElementById('imgtip');
+
+  function setStatus(text, warn) {
+    statusEl.textContent = text || '';
+    statusEl.className = warn ? 'status warn' : 'status';
+  }
+
+  function copyViaTextarea(value) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = value;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;left:-9999px;top:0;opacity:0;';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, value.length);
+      var ok = document.execCommand('copy');
+      ta.remove();
+      return ok;
+    } catch (e) { return false; }
+  }
+
+  function coverSrc() {
+    // 每篇只保留封面一张图，点「复制封面」显示原文章的封面。
+    // 新文章 images 字段只有封面；老文章没有 images 字段，从正文 img 里取第一张。
+    if (post.images && post.images.length) return post.images[0];
+    var imgs = bodyEl.querySelectorAll('img');
+    for (var i = 0; i < imgs.length; i++) if (imgs[i].src) return imgs[i].src;
+    return '';
+  }
+
+  // 面板只显示原文章封面这一张图，供长按/右键保存。
+  function showCover(src, note) {
+    imgList.innerHTML = '';
+    if (src) {
+      var box = document.createElement('div');
+      box.className = 'imgitem';
+      var label = document.createElement('p');
+      label.className = 'imglabel';
+      label.textContent = '封面';
+      var im = document.createElement('img');
+      im.src = src;
+      im.alt = '文章封面';
+      box.appendChild(label);
+      box.appendChild(im);
+      imgList.appendChild(box);
+    }
+    panelTip.textContent = note || '这是原文章的封面：电脑上右键「复制图片」，手机上长按图片保存，再上传到公众号。';
+    panel.hidden = false;
+  }
+
+  document.getElementById('imgclose').addEventListener('click', function () {
+    panel.hidden = true;
+    setStatus('');
+  });
+  function imageBlob() {
+    var img = bodyEl.querySelector('img');
+    if (!img || !img.complete || !img.naturalWidth) return Promise.resolve(null);
+    return new Promise(function (res) {
+      try {
+        var canvas = document.createElement('canvas');
+        canvas.width = img.naturalWidth;
+        canvas.height = img.naturalHeight;
+        canvas.getContext('2d').drawImage(img, 0, 0);
+        canvas.toBlob(function (b) { res(b); }, 'image/png');
+      } catch (e) { res(null); }
+    });
+  }
+
+  function selectBody() {
+    var range = document.createRange();
+    range.selectNodeContents(bodyEl);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+
+  function hideCopyExtras() {
+    var extras = bodyEl.querySelectorAll('h1, img');
+    for (var i = 0; i < extras.length; i++) extras[i].classList.add('copy-hide');
+    document.addEventListener('pointerdown', showCopyExtras, { once: true });
+  }
+
+  function showCopyExtras() {
+    var extras = bodyEl.querySelectorAll('.copy-hide');
+    for (var i = 0; i < extras.length; i++) extras[i].classList.remove('copy-hide');
+  }
+
+  function copyRichSync(rich, plain) {
+    var buffer = document.createElement('div');
+    buffer.contentEditable = 'true';
+    buffer.style.cssText = 'position:fixed;left:-10000px;top:0;background:#fff;';
+    buffer.innerHTML = rich;
+    document.body.appendChild(buffer);
+    var sel = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(buffer);
+    sel.removeAllRanges();
+    sel.addRange(range);
+    var handled = false;
+    function onCopy(ev) {
+      if (!ev.clipboardData) return;
+      try {
+        ev.clipboardData.setData('text/html', rich);
+        ev.clipboardData.setData('text/plain', plain);
+        handled = true;
+        ev.preventDefault();
+      } catch (e) {}
+    }
+    document.addEventListener('copy', onCopy, true);
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) {}
+    document.removeEventListener('copy', onCopy, true);
+    buffer.remove();
+    sel.removeAllRanges();
+    return ok && handled;
+  }
+
+  function copyRich() {
+    // 复制内容只要正文：去掉标题（h1）和封面图（img），避免公众号助手粘贴时报上传失败
+    var cloneEl = bodyEl.cloneNode(true);
+    var drop = cloneEl.querySelectorAll('h1, img');
+    for (var i = 0; i < drop.length; i++) drop[i].parentNode.removeChild(drop[i]);
+    var rich = cloneEl.innerHTML;
+    var plain = post.body_plain || (function () {
+      var t = cloneEl.textContent || '';
+      return t;
+    })();
+    // 微信内置浏览器不给网页写富文本剪贴板：execCommand 会静默降级成纯文本却报成功，
+    // 导致格式丢失。微信里一律不走程序化富文本复制，改用系统长按复制真实 DOM。
+    if (isWX) return Promise.resolve(false);
+    try {
+      if (navigator.clipboard && window.ClipboardItem && window.isSecureContext) {
+        var writing = navigator.clipboard.write([new ClipboardItem({
+          'text/html': new Blob([rich], { type: 'text/html' }),
+          'text/plain': new Blob([plain], { type: 'text/plain' })
+        })]);
+        return writing.then(function () { return true; }).catch(function () { return copyRichSync(rich, plain); });
+      }
+    } catch (e) {}
+    return Promise.resolve(copyRichSync(rich, plain));
+  }
+
+  // 精确选中正文：跳过标题 h1 与封面图所在块，从第一段正文选到末尾。
+  // 这样微信系统长按复制带走的只有正文（含内联样式），不会带上标题和封面。
+  function selectBodyText() {
+    var blocks = bodyEl.querySelectorAll('p, h2, h3, blockquote');
+    var start = null;
+    for (var i = 0; i < blocks.length; i++) {
+      var b = blocks[i];
+      if (b.querySelector('img')) continue;
+      if ((b.textContent || '').trim()) { start = b; break; }
+    }
+    var range = document.createRange();
+    if (start) range.setStartBefore(start); else range.selectNodeContents(bodyEl);
+    var last = bodyEl.lastChild;
+    while (last && last.nodeType === 3 && !(last.textContent || '').trim()) last = last.previousSibling;
+    if (last) range.setEndAfter(last);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+  }
+
+  // 微信里保住格式的关键：选中真实渲染的正文 DOM（内联样式随选区带走），再让用户长按复制。
+  function selectAndHint() {
+    selectBodyText();
+    try { document.getElementById('body').scrollIntoView({ block: 'start' }); } catch (e) {}
+    setStatus('已全选正文，请在正文上长按 → 全选 → 复制，格式会一起带过去', true);
+  }
+
+  // 蓝色主按钮：与本地 HTML 的「复制全文」一致。微信无法写富文本剪贴板，
+  // 走系统长按复制正文（保住格式）；桌面走一键富文本复制。
+  document.getElementById('btn-rich').addEventListener('click', function () {
+    if (isWX) { selectAndHint(); return; }
+    copyRich().then(function (ok) {
+      if (ok) { setStatus('带排版的全文已复制，直接去公众号助手粘贴即可'); return; }
+      selectAndHint();
+    });
+  });
+
+  document.getElementById('btn-title').addEventListener('click', function () {
+    var ok = copyViaTextarea(post.title || '');
+    setStatus(ok ? '标题已复制' : '复制失败，长按标题手动选择', !ok);
+  });
+
+  document.getElementById('btn-image').addEventListener('click', function () {
+    var src = coverSrc();
+    if (!src) { setStatus('这篇没有封面', true); return; }
+    showCover(src);
+    setStatus('已打开原文章封面，长按或右键保存即可', true);
+  });
+})();
+</script>
+</body>
+</html>
